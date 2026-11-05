@@ -25,7 +25,7 @@
 
 ---
 
-## VIDEO DE DEMOSTRACION:
+## VIDEO DE DEMOSTRACION: https://youtu.be/gMnUPRTJIvo
 
 Debido al límite de créditos de las cuentas educativas (*Azure for Students*), la infraestructura en la nube se elimina tras finalizar las pruebas y la entrega. En el siguiente video se presenta la arquitectura Serverless funcionando en vivo en nuestra cuenta de Azure y se explica en audio cada etapa del laboratorio:
 
