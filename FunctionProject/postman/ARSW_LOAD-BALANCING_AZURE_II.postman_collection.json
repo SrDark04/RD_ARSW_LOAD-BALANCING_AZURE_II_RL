@@ -1,0 +1,57 @@
+{
+	"info": {
+		"_postman_id": "329a103a-2a0a-4e74-9f38-383aa0e9e961",
+		"name": "ARSW_LOAD-BALANCING_AZURE_II",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Fibonacci Serverless",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "13ffad74-6e59-4466-b953-7bcefd94f839",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Fibonacci(1000000) answer is returned\", function () {",
+							"    pm.expect(pm.response.text().length).to.be.above(200000);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nth\": {{nth}}\n}"
+				},
+				"url": {
+					"raw": "https://{{FUNCTION_APP}}.azurewebsites.net/api/Fibonacci",
+					"protocol": "https",
+					"host": [
+						"{{FUNCTION_APP}}",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"Fibonacci"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
